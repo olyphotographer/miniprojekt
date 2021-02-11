@@ -5,7 +5,13 @@ module.exports = {
     debugScreens: {
       position: ['top', 'left'],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        headline: ['Oswald'],
+        normalo: ['Pacifico'],
+        gloria: ['GloriaHallelujah']
+      }
+    },
   },
   variants: {
     extend: {},

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply mb-6 text-5xl font-headline;
+    }
+
+    h2 {
+        @apply mb-3 text-3xl font-normalo;
+    }
+
+    h3 {
+        @apply mb-2 text-2xl font-gloria;
+    }
+
+    @font-face {
+        font-family: Oswald;
+        src: url(/dist/fonts/oswald/Oswald-Bold.ttf) format(" truetype ");
+    }
+
+    @font-face {
+        font-family: Pacifico;
+        src: url(/dist/fonts/pacifico/Pacifico-Regular.ttf) format(" truetype ");
+    }
+
+    @font-face {
+        font-family: GloriaHallelujah;
+        src: url(/dist/fonts/pacifico/GloriaHallelujah-Regular.ttf) format(" truetype ");
+    }
+}

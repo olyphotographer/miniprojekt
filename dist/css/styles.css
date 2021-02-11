@@ -551,6 +551,45 @@ video {
   height: auto;
 }
 
+h1 {
+  font-family: Oswald;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: Pacifico;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-family: GloriaHallelujah;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+@font-face {
+  font-family: Oswald;
+
+  src: url(/dist/fonts/oswald/Oswald-Bold.ttf) format(" truetype ");
+}
+
+@font-face {
+  font-family: Pacifico;
+
+  src: url(/dist/fonts/pacifico/Pacifico-Regular.ttf) format(" truetype ");
+}
+
+@font-face {
+  font-family: GloriaHallelujah;
+
+  src: url(/dist/fonts/pacifico/GloriaHallelujah-Regular.ttf) format(" truetype ");
+}
+
 .container {
   width: 100%;
 }
@@ -11270,6 +11309,18 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-headline {
+  font-family: Oswald;
+}
+
+.font-normalo {
+  font-family: Pacifico;
+}
+
+.font-gloria {
+  font-family: GloriaHallelujah;
 }
 
 .font-thin {
@@ -41898,6 +41949,18 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-headline {
+    font-family: Oswald;
+  }
+
+  .sm\:font-normalo {
+    font-family: Pacifico;
+  }
+
+  .sm\:font-gloria {
+    font-family: GloriaHallelujah;
+  }
+
   .sm\:font-thin {
     font-weight: 100;
   }
@@ -72444,6 +72507,18 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-headline {
+    font-family: Oswald;
+  }
+
+  .md\:font-normalo {
+    font-family: Pacifico;
+  }
+
+  .md\:font-gloria {
+    font-family: GloriaHallelujah;
   }
 
   .md\:font-thin {
@@ -102994,6 +103069,18 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-headline {
+    font-family: Oswald;
+  }
+
+  .lg\:font-normalo {
+    font-family: Pacifico;
+  }
+
+  .lg\:font-gloria {
+    font-family: GloriaHallelujah;
+  }
+
   .lg\:font-thin {
     font-weight: 100;
   }
@@ -133542,6 +133629,18 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-headline {
+    font-family: Oswald;
+  }
+
+  .xl\:font-normalo {
+    font-family: Pacifico;
+  }
+
+  .xl\:font-gloria {
+    font-family: GloriaHallelujah;
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -164088,6 +164187,18 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-headline {
+    font-family: Oswald;
+  }
+
+  .\32xl\:font-normalo {
+    font-family: Pacifico;
+  }
+
+  .\32xl\:font-gloria {
+    font-family: GloriaHallelujah;
   }
 
   .\32xl\:font-thin {

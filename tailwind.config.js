@@ -1,16 +1,21 @@
+
+
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     debugScreens: {
       position: ['top', 'left'],
     },
     extend: {
+      colors: {
+        maincolor: ''
+      },
       fontFamily: {
         headline: ['Oswald'],
         normalo: ['Pacifico'],
         gloria: ['GloriaHallelujah']
-      }
+      },
     },
   },
   variants: {

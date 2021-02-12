@@ -1,75 +1,138 @@
-<html>
+<html x-bind:class="darkmode ? 'dark' : '' " x-data="{ darkmode: false, test1: 'Peter' } ">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Body</title>
+    <html lang="de">
+    <meta name="MiniProjekt" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title></title>
-  <meta name="MiniProjekt" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-
-<body class="bg-blue-200 debug-screens">
-  <div class="container min-h-screen px-2 mx-auto bg-gray-100">
-    <section id="top">
-      <!-- Seitenkopf / Überschriften -->
-      <div class="mb-8 text-center">
-        <h1 class="font-headline">Thomas Schmidt-Gonzales Hometraining<br>Ich bring Dich in Form!</h1>
-        <h2 class="font-normalo">Muskelaufbau &middot; Funktionales Training &middot; Ernährungsberatung</h2>
+  <body class="min-h-screen bg-maincolor debug-screens">
+    <div class="container min-h-full px-2 mx-auto bg-gray-100 dark:bg-gray-900">
+      
+      <div class="flex justify-end ">
+        <span class="flex items-center pr-2 text-sm text-gray-500 ">Darkmode</span>
+          <!-- off -->
+          <span @click="darkmode = !darkmode" x-show="darkmode" class="flex items-center justify-start w-12 bg-gray-600 border rounded-full cursor-pointer border-grey">
+            <span class="w-6 h-6 bg-gray-100 border rounded-full shadow shadow-inner border-grey">
+            </span>
+          </span>
+        
+          <!------- on ----->
+          <span @click="darkmode = !darkmode" x-show="!darkmode" class="flex items-center justify-end w-12 bg-gray-600 rounded-full cursor-pointer border-grey bg-green">
+            <span class="w-6 h-6 bg-gray-100 border rounded-full shadow shadow-inner border-grey">
+            </span>
+          </span>      
       </div>
-    </section>
 
-    <section id="bild_leistungen">
-      <div class="grid grid-cols-2 gap-4 ">
-
-        <!-- Bild -->
-        <div id="bild" class="px-12">
-          <img src="img/tom.jpg" alt="Thomas Schmidt Online-Trainer">
+      
+      <section  id="top">
+        <!-- Seitenkopf / Überschriften -->
+        <div class="mb-8 text-center">
+          <h1 class="leading-snug xl:leading-normal">
+            Thomas Schmidt-Gonzales Hometraining<br />
+            <span class=" dark:text-indigo-200 ​text-indigo-900 italic text-4xl sm:text-5xl lg:text-6xl opacity-80​"> ​<q>​&nbsp;
+              Ich bring Dich in Form!&nbsp;​</q>
+            </span> 
+          </h1>
+          <h2 class="font-normalo">
+            Muskelaufbau &middot; Funktionales Training &middot;
+            Ernährungsberatung
+          </h2>
         </div>
+      </section>
 
-        <!-- Leistungen -->
-        <div id="leistungen">
-          <h3>Ich biete Dir:</h3>
-          <ul>
-            <li>Unterricht per Skype und du kannst alle Sessions aufnehmen und später noch einmal ansehen.</li>
-            <li>Ganzheitliches Ganzkörpertraining</li>
-            <li>Training ohne Geräte</li>
-            <li>Schmerzreduktion</li>
-            <li>Maßgeschneiderte Ernährungspläne</li>
-          </ul>
-          <h3>Meine Qualifikationen:</h3>
-          <ul>
-            <li>Zertifizierter Ernährungsberater</li>
-            <li>Zertifizierter Fitnesstrainer</li>
-            <li>5 Jahre Erfahrung im 1:1 - Training</li>
-          </ul>
+      <section id="bild_leistungen">
+        <div class="grid gap-6 sm:grid-cols-2 lg:gap-10 xl:w-8/12 xl:mx-auto">
+          <!-- Bild -->
+          <div id="bild" class="mx-auto sm:ml-auto">
+            <img src="img/tom.jpg" alt="Thomas Schmidt Online-Trainer" />
+          </div>
+
+          <!-- Leistungen -->
+          <div id="leistungen">
+            <h3>Ich biete Dir:</h3>
+            <ul class="ml-5 list-disc">
+              <li>
+                Unterricht per Skype und du kannst alle Sessions aufnehmen und
+                später noch einmal ansehen.
+              </li>
+              <li>Ganzheitliches Ganzkörpertraining</li>
+              <li>Training ohne Geräte</li>
+              <li>Schmerzreduktion</li>
+              <li>Maßgeschneiderte Ernährungspläne</li>
+            </ul>
+            <section class="hidden md:block" id="quali_rechts">
+              <h3 class="mt-10">Meine Qualifikationen:</h3>
+              <ul class="ml-5 list-disc">
+                <li>Zertifizierter Ernährungsberater</li>
+                <li>Zertifizierter Fitnesstrainer</li>
+                <li>5 Jahre Erfahrung im 1:1 - Training</li>
+              </ul>
+            </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <section class="md:hidden" id="quali_unten">
+        <h3 class="mt-6">Meine Qualifikationen:</h3>
+        <ul class="ml-5 list-disc">
+          <li>Zertifizierter Ernährungsberater</li>
+          <li>Zertifizierter Fitnesstrainer</li>
+          <li>5 Jahre Erfahrung im 1:1 - Training</li>
+        </ul>
+      </section>
 
-    <!-- Preise und Bezahlung -->
-    <section id="preise_bezahlung" class="mt-12">
-      <div class="w-8/12 mx-auto">
-        <h2>Preise und Bezahlung</h2>
-        <p>Mein wichtigstes Ziel ist, daß du mit Deinen Zielen voran kommst.</p>
-        <p>In einer kostenlosen Anfangssession besprechen wir, was du erreichen willst und wieviel du maximal ausgeben
-          möchtest oder kannst. Dann finden wir garantiert eine Lösung, die zu Dir passt.</p>
-      </div>
-    </section>
-    <section id="kontakt">
-      <!-- Kontakt -->
-      <div class="grid w-8/12 grid-cols-2 mx-auto mt-8">
-        <div id="email">
-          <p>Schreibe mir auf:</p>
-          <a href="mailto:tomgonzales@gmail.com">Email senden</a>
+      <!-- Preise und Bezahlung -->
+      <section id="preise_bezahlung" class="mt-10">
+        <div class="mx-auto md:w-8/12 2xl:w-7/12">
+          <h2>Preise und Bezahlung</h2>
+          <p>
+            Mein wichtigstes Ziel ist, daß du mit Deinen Zielen voran kommst.
+          </p>
+          <p class="text-justify">
+            In einer kostenlosen Anfangssession besprechen wir, was du erreichen
+            willst und wieviel du maximal ausgeben möchtest oder kannst. Dann
+            finden wir garantiert eine Lösung, die zu Dir passt.
+          </p>
         </div>
-        <div id="whatsApp_telefon">
-          <p>WhatsApp:</p>
-          0275 / 555 44 33
+      </section>
+      <section id="kontakt">
+        <!-- Kontakt -->
+        <div
+          class="flex mt-8 lg:flex-none justify-evenly lg:grid lg:w-8/12 2xl:w-7/12 lg:mx-auto lg:grid-cols-2 pb-9 lg:mt-12"
+        >
+          <div id="email">
+            <p>Schreibe mir auf:</p>
+            <a
+              class="flex items-center px-4 py-2 transition bg-gray-300 rounded shadow-sm hover:bg-gray-600 hover:shadow-none focus:ring-2 focus:ring-yellow-200 w-max hover:text-gray-100"
+              href="mailto:tomgonzales@gmail.com"
+            >
+              <svg
+                class="h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-at-sign"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+              </svg>
+              Email senden</a
+            >
+          </div>
+          <div class="mt-5 sm:mt-0" id="whatsApp_telefon">
+            <p>WhatsApp:</p>
+            <span class="dark:text-gray-400">0275 / 555 44 33</span> 
+          </div>
         </div>
-      </div>
-  </div>
-  </section>
-
-</body>
-
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  </body>
 </html>
